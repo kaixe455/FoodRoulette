@@ -6,12 +6,25 @@ import type {
   XataRecord,
 } from "@xata.io/client";
 
-const tables = [] as const;
+const tables = [
+  {
+    name: "foodTypes",
+    columns: [
+      { name: "name", type: "string" },
+      { name: "tested", type: "bool", notNull: true, defaultValue: "false" },
+    ],
+  },
+] as const;
 
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type DatabaseSchema = {};
+export type FoodTypes = InferredTypes["foodTypes"];
+export type FoodTypesRecord = FoodTypes & XataRecord;
+
+export type DatabaseSchema = {
+  foodTypes: FoodTypesRecord;
+};
 
 const DatabaseClient = buildClient();
 

@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://ngel-Angulo-Nieto-s-workspace-gs09ru.eu-west-1.xata.sh/db/foodroulette",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

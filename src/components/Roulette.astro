@@ -1,0 +1,67 @@
+---
+import { getNotTestedFoods } from "@services/foods.js";
+const notTestedFoods = await getNotTestedFoods();
+//console.log(notTestedFoods[getRandomInt(notTestedFoods.length)].name);
+const firstItem = notTestedFoods[0].name;
+const secondItem = notTestedFoods[1].name;
+const thridItem = notTestedFoods[2].name;
+var foodResult = false;
+if (foodResult) {
+  console.log("foodResult is true");
+}
+---
+
+<div class="grid grid-rows-3 font-bungee text-4xl gap-4 my-10">
+  <div class="row-span-1 flex flex-col items-center">
+    <span id="itemFirst" class="opacity-40">{firstItem}</span>
+  </div>
+  <div class="row-span-1 flex flex-col items-center">
+    <span id="secondItem">{secondItem}</span>
+  </div>
+  <div class="row-span-1 flex flex-col items-center">
+    <span id="thridItem" class="opacity-40">{thridItem}</span>
+  </div>
+</div>
+<div class="grid grid-rows-1 font-bungee text-4xl gap-4 my-10">
+  <button
+    class="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 border-b-4 border-black hover:border-black rounded transition-all duration-300"
+  >
+    START
+  </button>
+</div>
+<script is:global define:vars={{ notTestedFoods }} type="module">
+  // Find all buttons with the `alert` class on the page.
+  const button = document.querySelectorAll("button");
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+  // Handle clicks on each button.
+  button.forEach((button) => {
+    button.addEventListener("click", async () => {
+      itemFirst.classList?.add("animate-ping-slow");
+      secondItem.classList.add("animate-ping-slow");
+      thridItem.classList.add("animate-ping-slow");
+      for (var i = 0; i < 25; i++) {
+        itemFirst.textContent =
+          await notTestedFoods[getRandomInt(notTestedFoods.length)].name;
+        secondItem.textContent =
+          await notTestedFoods[getRandomInt(notTestedFoods.length)].name;
+        thridItem.textContent =
+          await notTestedFoods[getRandomInt(notTestedFoods.length)].name;
+        await sleep(1000);
+        if (i == 24) {
+          itemFirst.classList?.remove("animate-ping-slow");
+          secondItem.classList?.remove("animate-ping-slow");
+          secondItem.classList?.add("text-5xl");
+          secondItem.classList?.add("animate-bounce");
+          thridItem.classList?.remove("animate-ping-slow");
+          foodResult = secondItem.textContent;
+        }
+      }
+    });
+  });
+</script>

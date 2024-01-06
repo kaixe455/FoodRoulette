@@ -1,7 +1,7 @@
 import { client } from "@db/dbConnection";
 
 export async function GET() {
-	let record = await client.db.foodTypes.filter("tested", false).getMany();
+	let record = await client.db.foodTypes.filter("tested", true).getMany();
 	return new Response(JSON.stringify(record), {
 		headers: { "Content-Type": "application/json" },
 		status: 200, // success

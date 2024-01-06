@@ -96,7 +96,7 @@ function Roulette() {
 					</div>
 				</div>
 			)}
-			<div className="grid grid-rows-1 font-bungee text-4xl gap-4 my-10">
+			<div className="grid grid-rows-1 font-bungee text-4xl gap-4 my-10 p-6">
 				<button
 					onClick={(e) => playRoulette()}
 					className="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 border-b-4 border-black hover:border-black rounded transition-all duration-300"

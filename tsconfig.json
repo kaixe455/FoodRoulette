@@ -10,16 +10,11 @@
         "src/layouts/*"
       ],
       "@db/*": [
-        "db/*"
+        "src/db/*"
       ],
       "@services/*": [
         "src/services/*"
       ]
-    },
-    "resolve": {
-      "alias": {
-        "@": "path.resolve(__dirname, './src')",
-      }
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

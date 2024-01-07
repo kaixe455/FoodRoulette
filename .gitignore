@@ -1,6 +1,6 @@
 # build output
 dist/
-db/credentials.txt
+src/db/credentials.txt
 # generated types
 .astro/
 

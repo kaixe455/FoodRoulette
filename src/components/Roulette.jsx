@@ -17,7 +17,7 @@ function Roulette() {
 	let thirdFood;
 
 	const playRoulette = async () => {
-		const mixingTime = 5;
+		const mixingTime = 25;
 		setIsActiveRoulette(true);
 		winnerFood = notTestedFoods[getRandomInt(notTestedFoods.length)];
 		setWinner(winnerFood);

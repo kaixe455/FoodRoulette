@@ -10,5 +10,12 @@ export default defineConfig({
   output: "server",
   adapter: node({
     mode: "standalone"
-  })
+  }),
+  build: {
+    rollupOptions: {
+      external: [
+        "src/db/dbConnection"
+      ],
+    },
+  },
 });

@@ -18,12 +18,5 @@
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  },
-  "build": {
-    "rollupOptions": {
-      "external": [
-        "src/db/dbConnection"
-      ],
-    },
-  },
+  }
 }

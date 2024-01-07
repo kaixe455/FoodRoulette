@@ -18,9 +18,11 @@ export default defineConfig({
       rollupOptions: {
         external: [
           "@db/dbConnection.js",
-          "@components/*",
-          "@services/*",
-          "@layouts/*.astro"],
+          "@components/*.astro",
+          "@services/*.js",
+          "@layouts/*.astro",
+          "@components/*.jsx"
+        ],
       },
     }
   }

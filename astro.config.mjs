@@ -17,7 +17,9 @@ export default defineConfig({
     build: {
       rollupOptions: {
         external: [
-          "@db/dbConnection.js"
+          "@db/dbConnection.js",
+          "@components/*",
+          "@services/*"
         ],
       },
     }

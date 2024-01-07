@@ -11,11 +11,15 @@ export default defineConfig({
   adapter: node({
     mode: "standalone"
   }),
-  build: {
-    rollupOptions: {
-      external: [
-        "dbConnection"
-      ],
-    },
-  },
+  base: '/',
+  trailingSlash: "always",
+  vite: {
+    build: {
+      rollupOptions: {
+        external: [
+          "@db/dbConnection.js"
+        ],
+      },
+    }
+  }
 });

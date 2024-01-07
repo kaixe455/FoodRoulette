@@ -3,7 +3,7 @@ import { apiURL } from './conf.js'
 export const getTestedFoods = async () => {
     try {
         // this is the service consumed by astro component
-        const response = await fetch(`${apiURL}/testedfoods`)
+        const response = await fetch(`https://food-roulette-pi.vercel.app/api/testedfoods`)
         const foods = await response.json()
         return foods
     } catch (e) {
@@ -14,7 +14,7 @@ export const getTestedFoods = async () => {
 export const getNotTestedFoods = async () => {
     try {
         // this is the service consumed by react component
-        const response = await fetch(`${apiURL}/foods`)
+        const response = await fetch(`https://food-roulette-pi.vercel.app/api/foods`)
         const foods = await response.json()
         return foods
     } catch (e) {
@@ -26,7 +26,7 @@ export const updateFood = async (food) => {
     const updateFood = food
     console.log(updateFood)
     try {
-        const response = await fetch(`${apiURL}/foods/${updateFood.id}`, {
+        const response = await fetch(`https://food-roulette-pi.vercel.app/api/foods/${updateFood.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

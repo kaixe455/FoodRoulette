@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "baseUrl": "F:/Proyectos/FoodRoulette",
+      "baseUrl": ".",
     "paths": {
       "@components/*": [
         "src/components/*"
@@ -18,12 +18,5 @@
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  },
-  "build": {
-    "rollupOptions": {
-      "external": [
-        "src/db/dbConnection"
-      ],
-    },
-  },
+  }
 }

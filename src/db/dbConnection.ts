@@ -1,4 +1,4 @@
-import { XataClient } from "../src/xata.ts";
+import { XataClient } from "../xata.ts";
 
 export const client = new XataClient({
 	apiKey: import.meta.env.XATA_API_KEY,

@@ -16,6 +16,11 @@
         "src/services/*"
       ]
     },
+    "resolve": {
+      "alias": {
+        "@": "path.resolve(__dirname, './src')",
+      }
+    },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }

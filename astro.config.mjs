@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import path from 'path';
 import node from "@astrojs/node";
 
 import react from "@astrojs/react";
@@ -24,6 +25,11 @@ export default defineConfig({
           "@components/*.jsx"
         ],
       },
+    },
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src")
+      }
     }
   }
 });

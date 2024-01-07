@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [],
 	build: {
 		rollupOptions: {
-			external: ["/src/db/dbConection"],
+			external: ["src/db/dbConnection"],
 		},
 	},
 });

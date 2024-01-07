@@ -1,4 +1,4 @@
-import { client } from "@db/dbConnection";
+import { client } from "@db/dbConnection.ts";
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async ({ params, request }) => {

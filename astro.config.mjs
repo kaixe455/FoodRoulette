@@ -19,8 +19,8 @@ export default defineConfig({
         external: [
           "@db/dbConnection.js",
           "@components/*",
-          "@services/*"
-        ],
+          "@services/*",
+          "@layouts/*",],
       },
     }
   }

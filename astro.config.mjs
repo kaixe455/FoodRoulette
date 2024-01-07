@@ -20,7 +20,7 @@ export default defineConfig({
           "@db/dbConnection.js",
           "@components/*",
           "@services/*",
-          "@layouts/*",],
+          "@layouts/*"],
       },
     }
   }

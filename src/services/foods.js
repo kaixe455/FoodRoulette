@@ -1,8 +1,9 @@
-import { apiURL, REACT_API_URL } from './conf.js'
+import { apiURL } from './conf.js'
 
 export const getTestedFoods = async () => {
     try {
-        const response = await fetch(`${apiURL}/testedfoods`)
+        // this is the service consumed by astro component
+        const response = await fetch(`http://localhost:4321/api/testedfoods`)
         const foods = await response.json()
         return foods
     } catch (e) {
@@ -12,6 +13,7 @@ export const getTestedFoods = async () => {
 
 export const getNotTestedFoods = async () => {
     try {
+        // this is the service consumed by react component
         const response = await fetch(`http://localhost:4321/api/foods`)
         const foods = await response.json()
         return foods

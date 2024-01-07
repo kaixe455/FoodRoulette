@@ -1,4 +1,4 @@
-import { client } from "src/db/dbConnection";
+import { client } from "@db/dbConnection";
 
 export async function GET() {
 	let record = await client.db.foodTypes.filter("tested", true).getMany();
